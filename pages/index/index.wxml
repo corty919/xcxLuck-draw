@@ -1,0 +1,76 @@
+<!--pages/lottery/lottery.wxml-->
+
+<header-tip></header-tip>
+
+<view class="lottery_box">
+  <view class="tit_img">
+    <image src="../../images/jy/lottery/title@3x.png" mode="widthFix" />
+  </view>
+
+  <view class="lottery_con">
+    <view class="turntable_box">
+      <view class="turntable_con" style='transform:rotate({{change_angle}}deg)'>
+        <view class="item">
+          <image src="../../images/jy/lottery/icon01@3x.png" />
+          <text>积分商品</text>
+        </view>
+        <view class="item">
+          <image src="../../images/jy/lottery/icon02@3x.png" />
+          <text>100积分</text>
+        </view>
+        <view class="item">
+          <image src="../../images/jy/lottery/icon03@3x.png" />
+          <text>积分商品</text>
+        </view>
+        <view class="item">
+          <image src="../../images/jy/lottery/icon01@3x.png" />
+          <text>9折优惠券</text>
+        </view>
+        <view class="item">
+          <image src="../../images/jy/lottery/icon02@3x.png" />
+          <text>积分商品</text>
+        </view>
+        <view class="item">
+          <image src="../../images/jy/lottery/icon03@3x.png" />
+          <text>积分商品</text>
+        </view>
+        <view class="item">
+          <image src="../../images/jy/lottery/icon02@3x.png" />
+          <text>积分商品</text>
+        </view>
+        <view class="item">
+          <image src="../../images/jy/lottery/icon02@3x.png" />
+          <text>积分商品</text>
+        </view>
+      </view>
+      <image src="../../images/jy/lottery/btn@3x.png" mode="widthFix" class="go" bindtap="luckDrawStart"/>
+    </view>
+  </view>
+</view>
+
+
+<view class="bg_img">
+  <image src="../../images/jy/lottery/bg@3x.png" mode="widthFix" />
+</view>
+
+<!-- 奖品弹窗 -->
+<view class='popBox' hidden="{{ hideLotteryPop }}">
+  <form style="transform: translateY(-62rpx);">
+    <view class='pop'>
+      <view class="pop_tit" style="letter-spacing: 0; font-weight: bold;">获得精美礼品一份</view>
+      <view class='pop_con'>
+        <view class="editorDia_box">
+          <!-- 精美礼品 -->
+          <view class="lotteryDia_gift">
+            <view class="img">
+              <image src="../../images/jy/lottery/icon02@3x.png" />
+            </view>
+            <text class="stit">礼盒</text>
+            <view class="btn">立即领取</view>
+          </view>
+        </view>
+      </view>
+      <image src="../../images/jy/close@3x.png" class="pop_close" catchtap="popClose" />
+    </view>
+  </form>
+</view>

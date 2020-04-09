@@ -1,0 +1,404 @@
+/* pages/lottery/lottery.wxss */
+
+
+
+/**************自定义弹窗****************/
+
+.popBox {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  font-family: PingFangSC-Regular;
+  justify-content: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+.popBox form {
+  width: 80%;
+}
+
+.popBox .pop {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  /*width: 72%;*/
+}
+
+.pop_close {
+  position: absolute;
+  z-index: 200;
+  right: 36rpx;
+  top: 36rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.pop_tit {
+  color: #000;
+  font-size: 34rpx;
+  line-height: 44rpx;
+  letter-spacing: 6rpx;
+  padding: 50rpx 40rpx 20rpx 40rpx;
+  text-align: center;
+}
+
+.pop_con {
+  box-sizing: border-box;
+  max-height: 60vh;
+  overflow-y: scroll;
+  padding: 36rpx 40rpx;
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 20rpx;
+  color: #666 !important;
+}
+
+.pop_con .edit_textBox {
+  font-size: 28rpx;
+}
+
+.pop_con .tip {
+  color: #333;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  padding: 40rpx 0;
+  text-align: center;
+}
+
+.pop_btnBox {
+  align-items: center;
+  /* border-top: 2rpx solid #ddd; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.pop_btn {
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  height: 0;
+  line-height: 0;
+  flex: 1;
+  padding: 40rpx 0 !important;
+  position: relative;
+  text-align: center;
+  /*width: 50%;*/
+  font-weight: normal !important;
+}
+
+.pop_btn.cancel {
+  border: none;
+  color: #999;
+}
+
+.pop_btn.cancel:before {
+  background-color: #e5e5e5;
+  content: '';
+  margin: auto;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2rpx;
+  height: 64rpx;
+}
+
+.pop_btn.submit {
+  border: none;
+  color: #000;
+}
+
+.pop_btn:active {
+  background-color: #d2d3d5;
+}
+
+/******************************/
+
+page{
+	background-color: #423C24;
+	font-size: 0;
+	position: relative;
+}
+
+.lottery_box{
+	padding-top: 12rpx;
+	position: relative;
+	z-index: 100;
+}
+
+.tit_img{
+	margin: 0 10rpx 0 auto;
+	width: 680rpx;
+}
+
+.tit_img image{
+	width: 100%;
+}
+
+.bg_img{
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.bg_img image{
+	width: 100%;
+}
+
+.lottery_con{
+	display: flex;
+	flex-direction: column;
+	margin-top: -90rpx;
+}
+
+.lottery_con .btn{
+	margin: 0 auto;
+	width: 350rpx;
+}
+
+.turntable_box{
+	margin: 0 auto 10rpx;
+	position: relative;
+}
+
+.turntable_con{
+	position: relative;
+  transform-origin:center center;
+  background: lightcyan;
+  border-radius: 50%;
+	/* width: 680rpx;
+	height: 708rpx; */
+  width: 680rpx;
+  height: 680rpx;
+}
+
+.turntable_con .bgimg{
+  /* display: block; */
+  width: 100%;
+  display: none;
+  height: 100%;
+}
+
+.turntable_con .item{
+	display: flex;
+	flex-direction: column;
+	font-size: 0;
+	margin: auto;
+	position: absolute;
+	z-index: 10;
+	top: 42rpx;
+	left: 0;
+	right: 0;
+	text-align: center;
+	transform-origin: center 296rpx;
+	width: 150rpx;
+}
+
+.turntable_con .item:nth-child(1){
+	transform: rotate(-2deg);
+}
+
+.turntable_con .item:nth-child(2){
+	transform: rotate(43deg);
+}
+
+.turntable_con .item:nth-child(3){
+	transform: rotate(89deg);
+}
+
+.turntable_con .item:nth-child(4){
+	transform: rotate(134deg);
+}
+
+.turntable_con .item:nth-child(5){
+	transform: rotate(179deg);
+}
+
+.turntable_con .item:nth-child(6){
+	transform: rotate(224deg);
+}
+
+.turntable_con .item:nth-child(7){
+	transform: rotate(269deg);
+}
+
+.turntable_con .item:nth-child(8){
+	transform: rotate(313deg);
+}
+
+.turntable_con .item image{
+	margin: 0 auto 10rpx auto;
+	width: 100rpx;
+	height: 100rpx;
+}
+
+.turntable_con .item text{
+	color: #ADADAD;
+	font-size: 28rpx;
+	line-height: 40rpx;
+}
+
+.turntable_box .go{
+	margin: auto;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transform: translateY(-24rpx);
+	width: 242rpx;
+}
+/* .turntable_box .shaow{
+  width: 433rpx;
+  height: 46rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -5rpx;
+  position: absolute;
+} */
+
+.rule{
+	background-color: #847352;
+	border-radius: 40rpx;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	padding: 0 24rpx;
+	position: absolute;
+	z-index: 100;
+	right: 40rpx;
+	top: 32rpx;
+}
+
+.rule text{
+	color: #fff;
+	font-size: 24rpx;
+	line-height: 48rpx;
+	margin-right: 8rpx;
+}
+
+.rule image{
+	width: 14rpx;
+	height: 18rpx;
+}
+
+.lotteryDia_gift{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.lotteryDia_gift .img{
+	font-size: 0;
+	margin: 0 auto 40rpx auto;
+	width: 340rpx;
+}
+
+.lotteryDia_gift .img image{
+	width: 100%;
+	height: 340rpx;
+}
+
+.lotteryDia_gift .stit{
+	color: #b1a07f;
+	font-size: 32rpx;
+	font-weight: bold;
+	line-height: 44rpx;
+	margin-bottom: 80rpx;
+}
+
+.lotteryDia_gift .btn{
+	border-radius: 10rpx;
+	background: linear-gradient(to right, #f6eac2 , #d2ad76);
+	color: #333;
+	font-size: 36rpx;
+	line-height: 80rpx;
+	margin: 0 auto 40rpx auto;
+	width: 300rpx;
+}
+
+.lotteryDia_point{
+	font-size: 0;
+	padding: 100rpx 0;
+	text-align: center;
+}
+
+.lotteryDia_point .box{
+	display: inline-block;
+	position: relative;
+}
+
+.lotteryDia_point .icon{
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	top: 50%;
+	transform: translateY(-54%);
+	width: 100%;
+}
+
+.lotteryDia_point .text{
+	box-sizing: border-box;
+	color: #8E2928;
+	font-size: 48rpx;
+	line-height: 60rpx;
+	min-width: 178rpx;
+	padding-left: 24rpx;
+	padding-right: 18rpx;
+	position: relative;
+	z-index: 20;
+}
+
+.lotteryDia_point .text text{
+	font-size: 28rpx;
+}
+
+.coupon_list .li{
+	height: 146rpx;
+}
+
+.coupon_list .li .text{
+	font-size: 44rpx;
+}
+
+.coupon_list .li .discount{
+	font-size: 28rpx;
+}
+
+.coupon_list .li .discount text{
+	font-size: 90rpx;
+}
+
+.pop_close{
+	margin: auto;
+	top: auto;
+	bottom: -124rpx;
+	left: 0;
+	right: 0;
+	width: 60rpx;
+	height: 60rpx;
+}
+
+.popBox .pop{
+	overflow: inherit;
+}
+
